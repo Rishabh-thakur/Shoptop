@@ -2,11 +2,11 @@ import React from 'react';
 import { Typography, Button, Divider } from '@material-ui/core';
 import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-
 import Review from './Review';
 
-const stripePromise = loadStripe("pk_test_51KvG2aSDbXOQuaxcWiDwVw76BGFjiLiGdO6EEpgqgSCkP1KnuWIQxwuAqHZykRDAuEvFNs43BoLn2hSNduzHU4hx00Snb7PnQ6");
 
+const stripePromise = loadStripe("pk_test_51KvG2aSDbXOQuaxcWiDwVw76BGFjiLiGdO6EEpgqgSCkP1KnuWIQxwuAqHZykRDAuEvFNs43BoLn2hSNduzHU4hx00Snb7PnQ6");
+console.log(stripePromise);
 const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout,timeout }) => {
   const handleSubmit = async (event, elements, stripe) => {
     event.preventDefault();

@@ -3,6 +3,8 @@ import { commerce } from "./lib/commerce";
 import { Products, Navbar, Cart,Checkout } from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+console.log(process.env.REACT_APP_CHEC_PUBLIC_KEY);
+
 const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
@@ -60,6 +62,8 @@ const App = () => {
     fetchCart();
   }, []);
 
+
+  
   return (
     <Router>
     <div>
